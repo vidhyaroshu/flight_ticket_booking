@@ -1,0 +1,104 @@
+<web-app>
+     
+<servlet>
+<servlet-name>login</servlet-name>
+ <servlet-class>Userdetails.UsersServlet</servlet-class>  
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+        <welcome-file>welcome.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>searchservlet</servlet-name>
+        <servlet-class>AirlineBooking.Searchservlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>searchservlet</servlet-name>
+        <url-pattern>/Searchservlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>flightservlet</servlet-name>
+        <servlet-class>Airline.FlightsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>flightservlet</servlet-name>
+        <url-pattern>/FlightsServlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>passengerservlet</servlet-name>
+        <servlet-class>Userdetails.PassengersServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>passengerservlet</servlet-name>
+        <url-pattern>/PassengersServlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>seatsservlet</servlet-name>
+        <servlet-class>Airline.SeatsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>seatsservlet</servlet-name>
+        <url-pattern>/SeatsServlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>paymentservlet</servlet-name>
+        <servlet-class>AirlineBooking.PaymentServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>paymentservlet</servlet-name>
+        <url-pattern>/PaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TicketsServlet</servlet-name>
+        <servlet-class>AirlineBooking.TicketsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TicketsServlet</servlet-name>
+        <url-pattern>/TicketsServlet</url-pattern>
+    </servlet-mapping>
+      <servlet>
+        <servlet-name>MyBookingsServlet</servlet-name>
+        <servlet-class>AirlineBooking.MyBookingsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>MyBookingsServlet</servlet-name>
+        <url-pattern>/MyBookingsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CancelServlet</servlet-name>
+        <servlet-class>AirlineBooking.CancelServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>CancelServlet</servlet-name>
+        <url-pattern>/CancelServlet</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>LoginFilter</filter-class>
+    </filter>
+
+   
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/login</url-pattern>
+    </filter-mapping> 
+      
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/search.jsp</url-pattern>
+    </filter-mapping>  
+</web-app>
